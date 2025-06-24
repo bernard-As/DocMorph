@@ -1,0 +1,166 @@
+@import "tailwindcss";
+
+/* DocMorph Global Styles - Built by Montfort Assogba */
+
+:root {
+	--background: #ffffff;
+	--foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--background: #0a0a0a;
+		--foreground: #ededed;
+	}
+}
+
+/* Base styles */
+* {
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background: var(--background);
+	color: var(--foreground);
+	font-family:
+		var(--font-inter),
+		system-ui,
+		-apple-system,
+		sans-serif;
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+	width: 8px;
+	height: 8px;
+}
+
+::-webkit-scrollbar-track {
+	background: rgb(243 244 246 / 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+	background: rgb(156 163 175 / 0.5);
+	border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: rgb(107 114 128 / 0.7);
+}
+
+.dark ::-webkit-scrollbar-track {
+	background: rgb(31 41 55 / 0.5);
+}
+
+.dark ::-webkit-scrollbar-thumb {
+	background: rgb(75 85 99 / 0.5);
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+	background: rgb(107 114 128 / 0.7);
+}
+
+/* Glass morphism utilities */
+.glass {
+	background: rgba(255, 255, 255, 0.1);
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+	border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.glass-dark {
+	background: rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Animation utilities */
+@keyframes float {
+	0%,
+	100% {
+		transform: translateY(0px);
+	}
+	50% {
+		transform: translateY(-10px);
+	}
+}
+
+.animate-float {
+	animation: float 6s ease-in-out infinite;
+}
+
+/* Focus styles */
+.focus-visible:focus-visible {
+	outline: 2px solid #1da1f2;
+	outline-offset: 2px;
+}
+
+/* Selection styles */
+::selection {
+	background-color: #1da1f2;
+	color: white;
+}
+
+/* Print styles */
+@media print {
+	body {
+		background: white !important;
+		color: black !important;
+	}
+
+	.no-print {
+		display: none !important;
+	}
+}
+
+/* Loading animation */
+@keyframes spin {
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+.animate-spin {
+	animation: spin 1s linear infinite;
+}
+
+/* Drag and drop styles */
+.drag-over {
+	border-color: #1da1f2 !important;
+	background-color: rgba(29, 161, 242, 0.1) !important;
+}
+
+/* Typography improvements */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: 600;
+	line-height: 1.25;
+}
+
+/* Button focus improvements */
+button:focus-visible,
+a:focus-visible {
+	outline: 2px solid #1da1f2;
+	outline-offset: 2px;
+}
+
+/* Smooth transitions */
+* {
+	transition-property:
+		color, background-color, border-color, text-decoration-color, fill, stroke,
+		opacity, box-shadow, transform, filter, backdrop-filter;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-duration: 150ms;
+}

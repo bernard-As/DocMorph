@@ -1,0 +1,14 @@
+Welcome to DocMorph Test
+
+This is a sample text file for testing the document conversion functionality.
+
+Features to test:
+- Text to HTML conversion
+- HTML to Text conversion
+- Word document processing
+- PDF generation (if supported)
+
+Built by Montfort Assogba
+Date: June 12, 2025
+
+This file can be used to test the most reliable conversions in the DocMorph application.
